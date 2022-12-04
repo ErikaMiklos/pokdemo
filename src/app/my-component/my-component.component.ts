@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { POKEMONS } from '../shared/pokemon';
 
 @Component({
   selector: 'app-my-component',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class MyComponentComponent implements OnInit {
 
   id: any = document.getElementById("inputId");
+  pokemons = POKEMONS;
 
   constructor() { }
 

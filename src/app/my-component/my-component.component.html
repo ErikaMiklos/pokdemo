@@ -1,3 +1,10 @@
 <input [(ngModel)]="id">
 <p>{{id}}</p>
 <input type="text" id="inputId">
+<h3 class="p-3 text-center">Angular - Display a list of pokemons with ngFor</h3>
+<label for="pokemons">Choose a pokemon: </label>
+<select id="pokemons" [(ngModel)]="pokemons">
+    <option *ngFor="let pokemon of pokemons" [value]="pokemon.id">
+      {{pokemon.name}}
+    </option>
+</select>
