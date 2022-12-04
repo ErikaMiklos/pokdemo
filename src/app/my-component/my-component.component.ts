@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyComponentComponent implements OnInit {
 
-  id: string = '';
-  
+  id: any = document.getElementById("inputId");
+
   constructor() { }
 
   ngOnInit(): void {
