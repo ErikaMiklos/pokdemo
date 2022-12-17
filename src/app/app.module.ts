@@ -8,12 +8,14 @@ import { MyComponentComponent } from './my-component/my-component.component';
 import { FormsModule } from '@angular/forms';
 import { FilterPokemonPipePipe } from './filter-pokemon--pipe.pipe';
 import { PokeAPIServiceService } from './services/poke-apiservice.service';
+import { PokedetailComponent } from './pokedetail/pokedetail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyComponentComponent,
-    FilterPokemonPipePipe
+    FilterPokemonPipePipe,
+    PokedetailComponent
   ],
   imports: [
     BrowserModule,
