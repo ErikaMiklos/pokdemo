@@ -1,13 +1,17 @@
+<p>Inserer votre id:
 <input [(ngModel)]="id">
-<br>
+</p>
 <p>Mon id est: {{id}}</p>
 <input readonly [(ngModel)]="id">
 <br>
 <h3 class="p-3 text-center">Angular - Display a list of pokemons with ngFor</h3>
 <p>l'id de mon pokemon selectionné: {{selectedPokemonId}}</p>
+<p>Recherche par nom: 
+<input [(ngModel)]="searchPokemonName">
+</p>
 <label for="pokemons">Choose a pokemon: </label>
 <select id="pokemons" [(ngModel)]="selectedPokemonId">
-    <option *ngFor="let pokemon of pokemons" [value]="pokemon.id">
+    <option *ngFor="let pokemon of pokemons | filterPokemonPipe:'name':searchPokemonName" [value]="pokemon.id">
       {{pokemon.name}}
     </option>
 </select>

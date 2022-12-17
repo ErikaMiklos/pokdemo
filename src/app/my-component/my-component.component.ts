@@ -10,7 +10,8 @@ export class MyComponentComponent implements OnInit {
 
   id: string = '';
   pokemons: Pokemon[] = [];
-  selectedPokemonId: string = "";
+  selectedPokemonId: string = '';
+  searchPokemonName: string = '';
 
   constructor() { 
     this.pokemons.push(new Pokemon('1', 'pikachu'));
