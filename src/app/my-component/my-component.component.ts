@@ -28,11 +28,13 @@ export class MyComponentComponent implements OnInit {
   }
 
   go(){
-    this.pokeShareInfoService.setValue(this.selectedPokemonId);
 
     if(this.selectedPokemonId !== ''){
       this.pokemonService.getPokemonInfo(this.selectedPokemonId)
-      .subscribe({ next:pokeDetail => this.pokeDetail = pokeDetail});
+      .subscribe( (data) => {
+      this.pokeDetail = data;
+      this.pokeShareInfoService.setValue(this.selectedPokemonId)
+      });
     }
   }
 

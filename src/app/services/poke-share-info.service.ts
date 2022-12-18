@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,13 +8,13 @@ export class PokeShareInfoService {
 
   constructor() { }
 
-  value: string;
+  public stringVar = new Subject<string>();
 
-  getValue(): string{
-    return this.value;
+  getObservable(): Subject<string> {
+    return this.stringVar;
   }
 
-  setValue(value: string) {
-    this.value = value;
+  public setValue(newStringVar: string) {
+    this.stringVar.next(newStringVar);
   }
 }
