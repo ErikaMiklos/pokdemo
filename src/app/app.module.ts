@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { FilterPokemonPipePipe } from './filter-pokemon--pipe.pipe';
 import { PokeAPIServiceService } from './services/poke-apiservice.service';
 import { PokedetailComponent } from './pokedetail/pokedetail.component';
+import { PokeShareInfoService } from './services/poke-share-info.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PokedetailComponent } from './pokedetail/pokedetail.component';
     FormsModule
   ],
   providers: [
-    PokeAPIServiceService
+    PokeAPIServiceService,
+    PokeShareInfoService
   ],
   bootstrap: [AppComponent]
 })

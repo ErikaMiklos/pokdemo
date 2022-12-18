@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { PokeShareInfoService } from '../services/poke-share-info.service';
 import { PokeDetail } from '../shared/pokemon';
 
 @Component({
@@ -11,9 +12,10 @@ export class PokedetailComponent implements OnInit {
   @Input('detail')
   detail: PokeDetail;
 
-  constructor() { }
+  constructor(private pokeShareInfoService:PokeShareInfoService) { }
 
   ngOnInit(): void {
+    console.log(this.pokeShareInfoService.getValue());
   }
 
 }
