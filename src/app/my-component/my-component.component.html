@@ -1,13 +1,13 @@
-<p>Inserer votre id:
-<input [(ngModel)]="id">
+<p class="p-input-filled">Inserer votre id:
+<input [(ngModel)]="id" pInputText>
 </p>
-<p>Mon id est: {{id}}</p>
-<input readonly [(ngModel)]="id">
+<p class="p-input-filled">Mon id est: {{id}}</p>
+<input readonly [(ngModel)]="id" pInputText>
 <br>
 <h3 class="p-3 text-center">Angular - Display a list of pokemons with ngFor</h3>
 <p>l'id de mon pokemon selectionné: {{selectedPokemonId}}</p>
-<p>Recherche par nom: 
-<input [(ngModel)]="searchPokemonName">
+<p class="p-input-filled">Recherche par nom: 
+<input [(ngModel)]="searchPokemonName" pInputText>
 </p>
 <label for="pokemons">Choose a pokemon: </label>
 <select id="pokemons" [(ngModel)]="selectedPokemonId">
@@ -15,9 +15,11 @@
       {{pokemon.name}}
     </option>
 </select>
-<button (click)="go()">GO</button>
+<button type="button" (click)="go()" label="GO" pButton></button>
 <br>
 <div *ngIf="pokeDetail">
   <app-pokedetail [detail] = "pokeDetail"></app-pokedetail>
-  
 </div>
+
+<p-calendar [(ngModel)]="myDate"></p-calendar>
+<p-toggleButton [(ngModel)]="checked" onLabel="Confirm" offLabel="Return"></p-toggleButton>

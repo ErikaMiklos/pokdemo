@@ -15,6 +15,8 @@ export class MyComponentComponent implements OnInit {
   selectedPokemonId: string = '';
   searchPokemonName: string = '';
   pokeDetail: PokeDetail;
+  myDate: Date;
+  checked: boolean = true;
 
   constructor(private pokemonService: PokeAPIServiceService,
               private pokeShareInfoService: PokeShareInfoService ) {}
